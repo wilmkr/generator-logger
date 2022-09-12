@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('oil_change_recommendation', function (Blueprint $table) {
+        Schema::create('oil_change_recommendations', function (Blueprint $table) {
             $table->id();
             $table->foreignId('generator_id');
             $table->smallInteger('hours_interval');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oil_change_recommendation');
+        Schema::dropIfExists('oil_change_recommendations');
     }
 };

@@ -32,4 +32,12 @@ class Generator extends Model
     {
         $this->hasMany(RunningLog::class);
     }
+
+    /**
+     * Get the most recent oil maintenance performed
+     */
+    public function latestOilMaintenance()
+    {
+        $this->hasMany(OilMaintenance::class)->latestOfMany();
+    }
 }
